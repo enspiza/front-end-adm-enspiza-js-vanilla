@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADM - Ensalamento Anhanguera Catuaí</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-deep-orange.css">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <script src="./scripts/index.js" type="module"></script>
+</head>
+
+<body>
+
+  <header>
+  </header>
+
+  <main>
+    <!-- Confs -->
+    <section class="w3-container">
+      <article class="w3-panel w3-theme w3-round-large w3-card-4">
+        <h4 class="w3-center">
+          Administração de Ensalamento<br/>
+          do campus Piza
+        </h4>
+        <p class="w3-justify">&nbsp;&nbsp;&nbsp;Aplicativo de administração do aplicativo de apoio à localização de salas no campus Piza da universidade Anhanguera Unopar Pitágoras de Londrina. Versão 1.00</p>
+        <p class="w3-justify"><small>Autor: prof. esp. Wagner L. Berto | Todos os direitos reservados.</small></p>
+      </article>
+    </section>
+
+    <!-- Importação de arquivo TSV -->
+    <section class="w3-container">
+      <h4><b>Importação de dados</b></h4>
+      <fieldset id="fs-arquivo">
+        <legend><b>Selecionar um arquivo TSV:</b></legend>
+        <input type="file" id="tsvFileInput" name="tsvFileInput" accept=".tsv" required/>
+      </fieldset>
+      <fieldset id="fs-periodo">
+        <legend><b>Selecionar um período:</b></legend>
+        <input type="radio" id="periodoM" name="periodo" value="matutino" required/>
+          <label for="periodoM">Matutino&nbsp;&nbsp;</label>
+        <input type="radio" id="periodoV" name="periodo" value="vespertino" required/>
+          <label for="periodoV">Vespertino&nbsp;&nbsp;</label>
+        <input type="radio" id="periodoN" name="periodo" value="noturno" required/>
+          <label for="periodoN">Noturno&nbsp;&nbsp;</label>
+      </fieldset>
+      <button id="btn-importar" class="w3-button w3-orange w3-wide w3-round-xlarge w3-margin-top w3-margin-bottom"><b>Importar</b></button>
+      <div id="msg-carregamento">
+        Carregando 
+        <span id="progresso1"></span>
+        <span id="total1"></span>
+      </div>
+      <div id="msg-truncamento">
+      </div>
+      <div id="msg-insercao">
+        Inserindo
+        <span id="progresso2"></span>
+        <span id="total2"></span>
+      </div>
+      <article id="msg"></article>
+    </section>
+  </main>
+
+  <footer class="w3-bottom">
+    <div class="w3-bar w3-deep-orange">
+      <a href="./pages/matutino.html" class="w3-bar-item w3-button w3-small w3-hover-orange"><i
+          class="material-icons">sunny</i><br>Matutino</a>
+      <a href="./pages/vespertino.html" class="w3-bar-item w3-button w3-small w3-hover-orange"><i
+          class="material-icons">sunny_snowing</i><br>Vespetino</a>
+      <a href="./pages/noturno.html" class="w3-bar-item w3-button w3-small w3-hover-orange"><i
+          class="material-icons">nightlight</i><br>Noturno</a>
+      <a href="index.html" class="w3-bar-item w3-button w3-small w3-hover-orange w3-right w3-amber w3-amber"><i
+          class="material-icons">settings</i><br>Confs</a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
